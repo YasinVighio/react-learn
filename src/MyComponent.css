@@ -1,0 +1,14 @@
+.myName{
+    text-align: center;
+    font-family: cursive;
+    font-size: large;
+    color:burlywood;
+    -webkit-text-stroke: 0.2px black;
+    transition: transform .2s, margin .3s ease-in-out;
+    cursor: pointer;
+}
+
+.myName:hover{
+    transform: scale(2.6);
+    margin: 30px;
+}
