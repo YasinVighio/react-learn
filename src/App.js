@@ -1,14 +1,23 @@
-import LearningBoard from './LearningBoardComponents/LearningBoard';
+import { useState } from 'react';
 import './App.css';
+import './Commons/Common.css';
+import SectionSelector from './SectionComponents/SectionSelector';
+import LanguageSelector from './LanguageSelectorComponents/LanguageSelector';
+import {LanguageContext} from './Contexts/LanguageContext';
 
 function App() {
+
+  //the language state will be changed using language selector child component
+
+  let langState = useState('en');
+
   return (
+    <LanguageContext.Provider value={langState}>
     <div className="mainDiv">
-      <div className='learningBoardContainer'>
-      <h1 className='heading'>What we have learnt today?</h1>
-        <LearningBoard/>
-      </div>
+      <LanguageSelector/> 
+      <SectionSelector/>
     </div>
+    </LanguageContext.Provider>
   );
 }
 
