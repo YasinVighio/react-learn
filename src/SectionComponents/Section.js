@@ -9,9 +9,9 @@ function Section(props){
     let txt;
 
     if(lang == 'en'){
-        txt = "You just saw it when you changed language.";
+        txt = "You just saw it when you changed language and board theme.";
     } else {
-        txt = "Lo acabas de ver cuando cambiaste de idioma.";
+        txt = "Lo acabas de ver cuando cambiaste el idioma y el tema del tablero.";
     }
     if(props.sectionName == 'showLearningBoard'){
         return(

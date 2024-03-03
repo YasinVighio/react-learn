@@ -1,11 +1,11 @@
-import { useContext, useState } from 'react';
+import { useContext, useReducer, useState } from 'react';
 import './LearningBoard.css'
 import LearningBoardMessage from './LearningBoardMessage';
 import msgs from './Messages';
 import { LanguageContext, englishText, spanishText } from '../Contexts/LanguageContext';
 
 
-function LearningBoard(){
+function LearningBoard(props){
 
     let lang = useContext(LanguageContext)[0];
 
@@ -13,20 +13,13 @@ function LearningBoard(){
 
     let [counter, setCounter] = useState(0);
 
-    let color;
-
     if(counter>=msgs.length || counter<0){
         setCounter(0);
     }
 
-    if(counter%2 == 0){
-        color='blackBoard';
-    } else {
-        color='otherColor';
-    }
 
     return(
-        <div className={`learningBoard ${color}`}>
+        <div className={`learningBoard ${props.theme}`}>
             <LearningBoardMessage index={counter}/>
             <button  className='showMsgButon btLeft' onClick={
                 ()=>setCounter(counter-1)

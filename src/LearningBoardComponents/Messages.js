@@ -11,8 +11,14 @@ var msgs=[
     'If any child requires state/data it may access the data through context API if its in the scope of context',
     'Context API use createContext() hook',
     'Another solution for this is useReducer hook',
-    `Context is not a "state management" tool. It's a Dependency Injection mechanism, whose only purpose is to make a single value accessible to a nested tree of React components.`
-
+    `Context is not a "state management" tool. It's a Dependency Injection mechanism, whose only purpose is to make a single value accessible to a nested tree of React components.`,
+    `Today is 03/03/2024`,
+    `Today I learnt about useReducer()`,
+    `useReducer and useState are almost alike but their functionality is different`,
+    `useReducer was introduced after Redux, it provides a central location (The Reducer) for the state management which manages state
+    on the basis of switch statements, and the user of that reducer will change state via Dispatch`,
+    `It accepts a reducer function as its first parameter and the initial state as the second.`,
+    `Changing board theme is an example`
 ]
 
 export default msgs

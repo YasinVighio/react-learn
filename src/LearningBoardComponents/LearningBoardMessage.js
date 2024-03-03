@@ -3,7 +3,7 @@ import msgs from './Messages';
 
 function LearningBoardMessage(props){
     return(
-        <h3 className='learningBoardMsg'>{msgs[props.index]}</h3>
+        <h3 className='learningBoardMsg'>{props.index+1}. {msgs[props.index]}</h3>
     )
 }
 
